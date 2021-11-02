@@ -20,6 +20,7 @@ def checkout_counts():
     session['last_name'] = request.form['last_name']
     session['student_id'] = request.form['student_id']
     session['count'] =int(session['strawberry'])+int(session['raspberry'])+int(session['apple'])
+    print(f"Charging {session['first_name']} {session['last_name']} for {session['count']} fruits.")
     return redirect('/checkout')
 
 @app.route('/fruits')         
